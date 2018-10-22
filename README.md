@@ -65,3 +65,15 @@ influenced their contributions to open source projects and these could be used t
 
  
 Obviously, there are a lot of open questions, including (to me), how to select/operationalize the variables, and model to specify, though I know you already have a lot of infrastructure and experience with these topics and so I hoped I could put this idea out there to see if it may have any legs. Because of my familiarity with the tools of the trade, I’d love to carry out such a study in the context of R-related repositories, but am familiar enough with Python that I would be more than happy to think about a project using Python- (or both R and Python-)related repositories. 
+
+# References
+
+## Learning in software engineering
+
+Minghui Zhou and Audris Mockus. Developer fluency: Achieving true mastery in software projects. In ACM SIGSOFT / FSE, pages 137-146, Santa Fe, New Mexico, November 7-11 2010
+
+Audris Mockus. Succession: Measuring transfer of code and developer productivity. In 2009 International Conference on Software Engineering, Vancouver, CA, May 12-22 2009. ACM Press.
+
+Audris Mockus. Organizational volatility and its effects on software defects. In ACM SIGSOFT / FSE, pages 117-126, Santa Fe, New Mexico, November 7-11 2010. 
+
+Minghui Zhou and Audris Mockus. Who will stay in the floss community? modelling participant's initial behaviour. Transactions on Software Engineering, 41(1):82-99, Jan 2015.
