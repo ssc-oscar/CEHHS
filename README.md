@@ -37,7 +37,7 @@ Please consider options listed in (https://github.com/COSCS340/lectures/blob/mas
 
 ## How individuals transition from data science students to data scientists
 
-For example, there are 85K projects with R files
+For example, there are 850K projects with R files
 ```
 zcat pJR.gz| wc
  850079  850079 21573889
