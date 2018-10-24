@@ -66,6 +66,9 @@ influenced their contributions to open source projects and these could be used t
  
 Obviously, there are a lot of open questions, including (to me), how to select/operationalize the variables, and model to specify, though I know you already have a lot of infrastructure and experience with these topics and so I hoped I could put this idea out there to see if it may have any legs. Because of my familiarity with the tools of the trade, I’d love to carry out such a study in the context of R-related repositories, but am familiar enough with Python that I would be more than happy to think about a project using Python- (or both R and Python-)related repositories. 
 
+# Resources
+
+Stack Exchange. (2018). Developer Survey Results. https://insights.stackoverflow.com/survey/2018/
 # References
 
 ## Learning in software engineering
