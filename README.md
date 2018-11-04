@@ -66,6 +66,23 @@ influenced their contributions to open source projects and these could be used t
  
 Obviously, there are a lot of open questions, including (to me), how to select/operationalize the variables, and model to specify, though I know you already have a lot of infrastructure and experience with these topics and so I hoped I could put this idea out there to see if it may have any legs. Because of my familiarity with the tools of the trade, I’d love to carry out such a study in the context of R-related repositories, but am familiar enough with Python that I would be more than happy to think about a project using Python- (or both R and Python-)related repositories. 
 
+# How many course-related projects are ong github?
+```
+zcat ../c2fb/pJ*.s | grep -Ei 'assignm|course|homework|class|lesson|mooc|tutorial|syllabus|udacity' |gzip > teach
+ zcat teach | wc
+1184246 1184246 35283472
+```
+
+Over 1M, thats a small fraction of all projects but a large number in absolute terms.
+Lets investigate authors in these repos:
+```
+zcat gz/teach | ~/lookup/splitSecCh.perl /tmp/teach. 32
+for j in {0..32}; do zcat /tmp/teach.$j.gz | ~/lookup/Prj2CmtShow.perl p2cFullJ.$j.tch 1 1 | perl -ane 'chop();($p,$n,@cs)=split(/\;/);for my $c (@cs){ print "$c;$p\n"}' | lsort 5G -t\; -k1b,2 | gzip > gz/teach.c2p.$j.gz & done
+wait
+for j in {0..32}; do zcat gz/teach.c2p.$j.gz; done | ~/lookup/splitSec.perl gz/teach.c2p1. 128
+for j in {0..127}; do zcat gz/teach.c2p1.$j.gz | lsort 1G -t\; -k1b,2 | join -t\; - gz/c2ta.$j.s | gzip > gz/teach.c2pa.$j.gz; done
+
+```
 # Resources
 
 Stack Exchange. (2018). Developer Survey Results. https://insights.stackoverflow.com/survey/2018/
