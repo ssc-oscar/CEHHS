@@ -87,10 +87,10 @@ zcat gz/teach.a2p.gz | cut -d\; -f1 | ~/lookup/Prj2FileShow.perl A2PEx.tch 1 1 |
 zcat gz/teach.a2p.gz |  cut -d\; -f1 | uniq | wc -l
 649413
 
-zcat gz/teach.a2pA.gz | grep -vi 'assignm'| grep -iv 'course' | grep -iv 'homework' | grep -iv 'class' | grep -iv 'lesson' | grep -i v'mooc' | grep -iv 'tutorial' | grep -iv 'syllabus' | grep -iv 'udacity' |  cut -d\; -f1 | uniq | wc -l
-
+zcat gz/teach.a2pA.gz | grep -vi 'assignm'| grep -iv 'course' | grep -iv 'homework' | grep -iv 'class' | grep -iv 'lesson' | grep -iv 'mooc' | grep -iv 'tutorial' | grep -iv 'syllabus' | grep -iv 'udacity' |  cut -d\; -f1 | uniq | wc -l
+300180
 ```
-So the over 1M courses have only 650K authors. 
+So the over 1M courses have only 650K authors, but half of them contribute somwhere else.
 
 # Resources
 
