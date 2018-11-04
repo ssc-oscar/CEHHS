@@ -81,8 +81,17 @@ for j in {0..32}; do zcat /tmp/teach.$j.gz | ~/lookup/Prj2CmtShow.perl p2cFullJ.
 wait
 for j in {0..32}; do zcat gz/teach.c2p.$j.gz; done | ~/lookup/splitSec.perl gz/teach.c2p1. 128
 for j in {0..127}; do zcat gz/teach.c2p1.$j.gz | lsort 1G -t\; -k1b,2 | join -t\; - gz/c2ta.$j.s | gzip > gz/teach.c2pa.$j.gz; done
+for j in {0..127}; do zcat gz/teach.c2pa.$j.gz; done |awk -F\; '{print $4";"$2}' | lsort 20G -t\; -k1b,2 -u | gzip > gz/teach.a2p.gz 
+zcat gz/teach.a2p.gz | cut -d\; -f1 | ~/lookup/Prj2FileShow.perl A2PEx.tch 1 1 | perl -ane 'chop();($a,$n,@ps)=split(/\;/);for my $p (@ps){ print "$a;$p\n"}' | lsort 10G -t\; -k1b,2 | gzip >  gz/teach.a2pA.gz 
+#now compare gz/teach.a2pA.gz and gz/teach.a2p.gz
+zcat gz/teach.a2p.gz |  cut -d\; -f1 | uniq | wc -l
+649413
+
+zcat gz/teach.a2pA.gz | grep -vi 'assignm'| grep -iv 'course' | grep -iv 'homework' | grep -iv 'class' | grep -iv 'lesson' | grep -i v'mooc' | grep -iv 'tutorial' | grep -iv 'syllabus' | grep -iv 'udacity' |  cut -d\; -f1 | uniq | wc -l
 
 ```
+So the over 1M courses have only 650K authors. 
+
 # Resources
 
 Stack Exchange. (2018). Developer Survey Results. https://insights.stackoverflow.com/survey/2018/
