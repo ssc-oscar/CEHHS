@@ -93,6 +93,7 @@ zcat gz/teach.a2pA.gz | grep -vi 'assignm'| grep -iv 'course' | grep -iv 'homewo
 So the over 1M courses have only 650K authors, but half of them contribute somwhere else.
 
 # Resources
+The stae of the Octoverse, 2018 https://octoverse.github.com/
 
 Stack Exchange. (2018). Developer Survey Results. https://insights.stackoverflow.com/survey/2018/
 # References
